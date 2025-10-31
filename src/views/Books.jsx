@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import moment from 'moment';
 import withAuth from "../components/WithAuth";
 import { fetchApi } from "../Functions";
+import AddBookModal from "../components/AddBookModal";
 moment.locale('nl');
 
 const Books = () => {
@@ -16,16 +17,6 @@ const Books = () => {
 
         setReadingYears(getYears);
         setBooks(getBooksOfYear);
-    }
-
-    const bookRating = (rating) => {
-        return (
-            <div className="flex">
-              {Array.from({ length: rating }, (_, i) => (
-                <i key={i} className="fa-solid fa-star text-yellow-500"></i>
-              ))}
-            </div>
-        );
     }
 
     useEffect(() => {
@@ -89,6 +80,8 @@ const Books = () => {
                         </div>
                     </div>
                 </div>
+
+                <AddBookModal year={year}/>
             </div>
         </React.Fragment>
     )
