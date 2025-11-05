@@ -900,6 +900,16 @@ td.rating svg{
   display:block
 }
 
+.btn-new, .btn-new:hover{
+  float: right;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-right: 25px;
+  padding: 7px 15px;
+  font-weight: 500;
+}
+
 /* Mobile app */
 
 @media screen and (max-width: 768px) {
