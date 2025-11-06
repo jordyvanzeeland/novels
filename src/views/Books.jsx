@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from 'moment';
 import { fetchApi } from "../Functions";
+import withAuth from '../components/WithAuth';
 moment.locale('nl');
 
 const Books = () => {
@@ -175,4 +176,4 @@ const Books = () => {
     )
 }
 
-export default Books;
+export default withAuth(Books);
